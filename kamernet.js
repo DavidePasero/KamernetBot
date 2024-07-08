@@ -206,7 +206,7 @@ export async function lookForRooms() {
         }
     } catch (e) {
         console.log(chalk.red("[UNEXPECTED ERROR]: " + e));
-        // Saves the last visited URL to the file
+        // Saves the last reacted URL to the file
         await writeLastUrl(lastReactedUrl);
         await page.close();
         await browser.close();
