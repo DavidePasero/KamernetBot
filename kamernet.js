@@ -162,6 +162,7 @@ export async function lookForRooms() {
             throw new Error(chalk.red("Please fill in message.txt!"));
 
         page = (await browser.pages())[0];
+        page.setDefaultTimeout(0);
 
         await page.goto('https://kamernet.nl/en')
         await page.locator('button ::-p-text(Log in)').wait();
